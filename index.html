@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Axolotl Race</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="setupScreen">
+    <h1>🐾 The Grand "AXOLOTL JOCKEY" RACE 🐾</h1>
+    <video id="camera" autoplay></video>
+    <div id="playerInputs"></div>
+    <button id="startGameBtn">Start Game</button>
+  </div>
+
+  <div id="gameScreen" style="display:none;">
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+    <div id="tapButtons"></div>
+  </div>
+
+  <div id="winnerScreen" style="display:none;">
+    <h2 id="winnerText">WINNER</h2>
+    <canvas id="winnerCanvas" width="80" height="80"></canvas>
+    <button onclick="newGame()">🏁 New Game</button>
+  </div>
+
+  <!-- Modal Editor -->
+  <div id="photoEditorModal" class="modal">
+    <div class="modal-content">
+      <h2>Adjust Your Face</h2>
+      <canvas id="editorCanvas" width="200" height="200"></canvas>
+      <div>
+        <button id="confirmPhoto">✅ Confirm</button>
+        <button id="cancelPhoto">❌ Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
